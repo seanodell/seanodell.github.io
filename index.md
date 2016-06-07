@@ -1,4 +1,10 @@
 
+---
+layout: page
+title: About
+permalink: /about/
+---
+
 \begin{align}
 \theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
 \end{align}
