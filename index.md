@@ -1,3 +1,9 @@
+---
+layout: page
+title: Index
+permalink: /
+---
+
 
 \begin{align}
 \theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
