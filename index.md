@@ -3,7 +3,6 @@ layout: page
 title: Index
 permalink: /
 ---
-
 \begin{align}
 \theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
 \end{align}
@@ -43,7 +42,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_1_0.png)
+![png](index_files/index_2_0.png)
 
 
 
