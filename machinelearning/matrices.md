@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Matrices
-permalink: /machinelearning/matrices
+permalink: /machinelearning/matrices/
 ---
 
 ## Creating a 4x2 Matrix
