@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Machine Learning
-permalink: /machinelearning
+permalink: /machinelearning/
 ---
   * [Matrices](matrices)
 
