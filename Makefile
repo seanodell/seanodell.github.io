@@ -1,6 +1,7 @@
-MODULES=. $(wildcard */)
-SRCS=$(foreach sdir,$(MODULES),$(wildcard $(sdir)/*.ipynb))
+MODULES=./ $(wildcard */)
+SRCS=$(foreach sdir,$(MODULES),$(wildcard $(sdir)*.ipynb))
 OBJS=$(SRCS:.ipynb=.md)
+FILES=$(SRCS:.ipynb=_files)
 
 %.md: %.ipynb
 	BASE=$(@:%.md=%)
@@ -9,3 +10,6 @@ OBJS=$(SRCS:.ipynb=.md)
 
 .phony: build
 build: $(OBJS)
+
+clean:
+	rm -rf $(OBJS) $(FILES)
