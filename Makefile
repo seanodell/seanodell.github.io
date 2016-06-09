@@ -1,15 +1,15 @@
 MODULES=./ $(wildcard */)
-SRCS=$(foreach sdir,$(MODULES),$(wildcard $(sdir)*.ipynb))
-OBJS=$(SRCS:.ipynb=.md)
-FILES=$(SRCS:.ipynb=_files)
+_SRCS=$(foreach sdir,$(MODULES),$(wildcard $(sdir)*.ipynb))
+SRCS=$(_SRCS:./%=%)
+OBJS=$(SRCS:%.ipynb=src/%.md)
+FILES=$(SRCS:%.ipynb=src/%_files)
 
-%.md: %.ipynb
-	BASE=$(@:%.md=%)
-	rm -rf ${BASE}_files
-	ipython nbconvert $< --to markdown --output=${BASE}
+src/%.md: %.ipynb
+	@rm -rf $(@:src/%.md=src/%_files)
+	@ipython nbconvert $< --to markdown --output-dir=src/$(dir $<)
 
 .phony: build
 build: $(OBJS)
 
 clean:
-	rm -rf $(OBJS) $(FILES)
+	@rm -rf src
