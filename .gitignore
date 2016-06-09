@@ -1,3 +1,5 @@
 /.project
 /**/.ipynb*
 /venv/
+/_site/
+/.sass-cache
